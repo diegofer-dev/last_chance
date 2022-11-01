@@ -1,0 +1,25 @@
+{
+  "name": "last_chance",
+  "version": "1.0.0",
+  "description": "Prueba técnica para Cathedral SW",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Testing a lot ...\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegofer-dev/last_chance.git"
+  },
+  "keywords": [
+    "nextjs",
+    "javascript",
+    "html",
+    "scss"
+  ],
+  "author": "diegofer-dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegofer-dev/last_chance/issues"
+  },
+  "homepage": "https://github.com/diegofer-dev/last_chance#readme"
+}
