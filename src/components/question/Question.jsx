@@ -22,7 +22,7 @@ function Question({ question }) {
 
   useEffect(() => {
     if (goTo === '') return;
-    navigate(goTo)
+    navigate('/last_chance' + goTo)
   }, [goTo])
 
   useEffect(() => {
@@ -65,7 +65,7 @@ function Question({ question }) {
             <div key={'response-' + idx} onClick={() => setClickedIdx(idx)} className='col-3 d-flex justify-content-center'>
               <div className='choice answer-container'>
                 <p className='fs-1'>{choice}</p>
-                {clickedIdx === idx && <button onClick={() => checkResponseAndGoNext(choice)} className='btn btn-light fs-3'>SUBMIT</button>}
+                {clickedIdx === idx && <button onClick={() => checkResponseAndGoNext(choice)} className='btn btn-dark fs-3'>SUBMIT</button>}
               </div>
             </div>
           )}
@@ -75,8 +75,8 @@ function Question({ question }) {
           <div className='answer-container'>
             <p className='fs-1'>Write your response here:</p>
             <div className='d-flex justify-content-center align-items-center'>
-              <input style={{ width: inputWidth }} onChange={(e) => setResponseText(e.target.value)} className='input-container' type='text' />
-              {responseText.length !== 0 && <button onClick={() => checkResponseAndGoNext(responseText)} className='ms-3 btn btn-light fs-3'>SUBMIT</button>}
+              <input style={{ width: inputWidth }} onChange={(e) => setResponseText(e.target.value)} onKeyDown={(event) => {if(event.key === 'Enter') checkResponseAndGoNext(responseText.trim())}} className='input-container' type='text' />
+              {responseText.length !== 0 && <button onClick={() => checkResponseAndGoNext(responseText.trim())} className='ms-3 btn btn-dark fs-3'>SUBMIT</button>}
             </div>
             <span></span>
           </div>

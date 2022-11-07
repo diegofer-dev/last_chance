@@ -15,23 +15,23 @@ import {
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/last_chance/',
         element: <App/>,
     },
     {
-        path: '/questions',
+        path: '/last_chance/questions',
         element: <Questions/>
     },
     {
-        path: '/right',
+        path: '/last_chance/right',
         element: <Right/>
     },
     {
-        path: '/wrong',
+        path: '/last_chance/wrong',
         element: <Wrong/>
     },
     {
-        path: '/summary',
+        path: '/last_chance/summary',
         element: <Summary/>
     }
 ]);

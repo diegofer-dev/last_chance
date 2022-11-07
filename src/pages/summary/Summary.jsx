@@ -30,7 +30,7 @@ function Summary() {
       </div>
       <div className='w-100 text-center'>
         <p className='fs-1 fw-bold'>YOUR WORTHINESS VALUE IS: {answers.map((elem) => elem.points).reduce((prev, curr) => prev + curr, 0)}</p>
-        <Link className='fs-4' to='/'> Try again?</Link>
+        <Link className='fs-4' to='/last_chance/'> Try again?</Link>
       </div>
     </div>
   )

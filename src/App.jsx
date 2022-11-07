@@ -50,7 +50,7 @@ function App() {
         <div>
             <div className='text-center fw-bold' style={{ fontSize: '5vw', height: '25vh' }}>LAST CHANCE FOR HUMANITY!</div>
             <div className='text-center fs-1 mb-5'>Time to prove your worthiness to the all mighty <strong>LOM</strong></div>
-            <div className='text-center'><Link className='btn btn-dark fs-3' to={'/questions'}>START 🤖</Link></div>
+            <div className='text-center'><Link className='btn btn-dark fs-3' to='/last_chance/questions'>START 🤖</Link></div>
         </div>
     )
 }

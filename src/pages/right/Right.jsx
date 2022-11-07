@@ -11,7 +11,7 @@ function Right() {
     const currentQuestionIdx = useSelector(state => state.questions.currentQuestionIdx);
     useEffect(() => {
         const timeout = setTimeout(() => {
-            questionsLength - 1 > currentQuestionIdx? navigate('/questions') : navigate('/summary');
+            questionsLength - 1 > currentQuestionIdx? navigate('/last_chance/questions') : navigate('/last_chance/summary');
         }, 5000);
         const interval = setInterval(() => {
             setTimeToNextQuestion(timeToNextQuestion => timeToNextQuestion - 1);

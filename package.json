@@ -1,9 +1,11 @@
 {
   "name": "last_chance",
   "version": "1.0.0",
-  "description": "",
+  "description": "A quick quizz for the salvation of humanity",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "echo 'Testing a lot'"
@@ -22,6 +24,7 @@
     "redux": "^4.2.0",
     "sass": "^1.56.0"
   },
+  "homepage": "https://diegofer-dev.github.io/last_chance/",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -33,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
