@@ -1,0 +1,32 @@
+.summary-container{
+    height: 100vh;
+
+    .summary-answer{
+        color: black;
+        padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+        border-radius: 40px;
+        background-color: white;
+        p{
+            margin-bottom: 0;
+            margin-right: 0.3rem;
+        }
+    }
+
+
+    .summary-correct-answer{
+        background-color: lightgreen;
+    }
+    .summary-wrong-answer{
+        background-color: lightcoral;
+    }
+    .summary-question-container{
+        padding: 1rem 2rem 1rem 2rem;
+        width: 90%;
+    }
+
+    .summary-wrong-answer,
+    .summary-correct-answer{
+        color: black;
+        border-radius: 40px;
+    }
+}
