@@ -57,7 +57,7 @@
             min-width: 10em;
             max-width: 90vw;
         }
-
+        /* span has to have the same css attributes that could affect the width to make the trick work*/
         span {
             font-size: 2.5rem;
             position: absolute;

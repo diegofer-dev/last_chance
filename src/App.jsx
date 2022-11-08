@@ -5,10 +5,12 @@ import { newGame } from './slices/questionsSlice';
 import { resetAnswers } from './slices/answersSlice';
 import { useDispatch } from 'react-redux';
 
+/**
+ * Front page of the application, whenever we anter this page, we set new array of questions and reset the answers
+ * @returns 
+ */
 function App() {
-    // Cada vez que entremos en esta pagina, reseteamos todo el juego
     const dispatch = useDispatch();
-
     useEffect(() => {
         dispatch(newGame(
             [
@@ -112,6 +114,8 @@ function App() {
                     points: 10,
                     duration: 30
                 },
+                // This last question is needed to display all the questions above
+                // This needs a fix, probably by changing the questions reducers
                 {
                     title: '',
                     type: '',

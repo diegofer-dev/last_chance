@@ -3,6 +3,11 @@ import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 import './Wrong.scss';
 
+/**
+ * This and Right.jsx are called in similar circumstances, both navigate to the summary or questions page
+ * The difference is this needs to retrieve the last answer to display the correct one
+ * @returns 
+ */
 function Wrong() {
     const navigate = useNavigate();
     const [timeToNextQuestion, setTimeToNextQuestion] = useState(5);

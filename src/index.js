@@ -13,6 +13,9 @@ import {
     RouterProvider
 } from 'react-router-dom';
 
+/**
+ * Router of application, all of them starts at last_chance to make this work on the domain provided by github
+ */
 const router = createBrowserRouter([
     {
         path: '/last_chance/',
