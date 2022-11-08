@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import './Question.scss';
 
 function Question({ question }) {
+  const timerDuration = question.duration
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [inputWidth, setInputWidth] = useState('');
@@ -28,12 +29,14 @@ function Question({ question }) {
   useEffect(() => {
     const timeout = setTimeout(() => {
       checkResponseAndGoNext('');
-    }, 10000)
+    }, timerDuration*1000);
+    const timer = document.getElementById('timer');
+    timer.style.animationDuration = timerDuration + 's';
     return () => { clearTimeout(timeout) }
   }, [])
 
   const checkResponseAndGoNext = answer => {
-    if (answer === question.correctAnswer) {
+    if (answer.toLowerCase() === question.correctAnswer.toLowerCase()) {
       dispatch(answerAdded({
         title: question.title,
         answer,
@@ -89,7 +92,7 @@ function Question({ question }) {
 
   return (
     <div className='question-container'>
-      <div className='timer'></div>
+      <div id='timer' className='timer'></div>
       <div className='title-container d-flex justify-content-center'>
         <div className='title fs-1 fw-bold'>{question.title}</div>
       </div>
