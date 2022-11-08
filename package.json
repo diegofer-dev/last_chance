@@ -8,7 +8,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "echo 'Testing a lot'"
+    "test": "jest"
   },
   "author": "diegofer-dev",
   "license": "ISC",
@@ -38,6 +38,14 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "babel-jest": "^29.3.0",
+    "gh-pages": "^4.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1"
   }
 }

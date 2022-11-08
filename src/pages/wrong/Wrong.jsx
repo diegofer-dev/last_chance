@@ -18,7 +18,6 @@ function Wrong() {
     const currentQuestionIdx = useSelector(state => state.questions.currentQuestionIdx);
 
     useEffect(() => {
-        console.log('compilo')
         const timeout = setTimeout(() => {
             questionsLength - 1 > currentQuestionIdx? navigate('/last_chance/questions') : navigate('/last_chance/summary');
         }, 5000);

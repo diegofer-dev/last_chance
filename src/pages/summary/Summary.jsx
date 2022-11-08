@@ -21,7 +21,7 @@ function Summary() {
                 answer.guessed? 
                 <p>{answer.answer}</p> : 
                 <div className='d-flex'>
-                    <p style={{color: didRespond? 'red' : 'orange'}}>{didRespond? answer.answer : "No answer"}</p><p>{"->"}</p><p style={{color: 'green'}}>{answer.correctAnswer}</p>
+                    <p style={{color: didRespond? 'red' : 'orange'}}>{didRespond? answer.answer : 'No answer'}</p><p>{'->'}</p><p style={{color: 'green'}}>{answer.correctAnswer}</p>
                 </div>}
               </div>
             </div>
